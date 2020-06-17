@@ -1,0 +1,31 @@
+<?php
+include_once "app/Controller.php";
+include_once "app/Artist.php";
+
+$id = $_GET['id'];
+
+$art = new App\Artist();
+$row = $art->edit($id);
+ ?>
+
+<h2 align="center">Edit Data Artist</h2>
+<form method="POST" action="artist_proses.php">
+	<input type="hidden" name="artist_id" value="<?php echo $id; ?>">
+	<table border="2" width="800" align="center" cellpadding="5">
+		<tr>
+			<th>Nama</th>
+			<td><input type="text" name="artist_name" value="<?php echo $row['artist_name']; ?>"></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><input type="submit" name="tedit" value="UPDATE"></td>
+		</tr>
+	</table>
+</form>
+	<div class="footer" align="center">
+		Silvia Kartika
+	</div>
+</div>
+</body>
+</html>
+

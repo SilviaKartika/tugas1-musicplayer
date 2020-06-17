@@ -1,0 +1,125 @@
+.container{
+	margin: auto;
+	width: 1020px;
+}
+
+.header{
+	margin-bottom: 10px;
+
+}
+.main{
+	width: 1020px;
+	margin: auto;
+	border: 5px solid #ccc;
+	min-height: 480px;
+	background-color: #fff ;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color:  #fff;
+}
+
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+.menu {
+	background-color: #21bf9a;
+	width: 990px;
+	height: 45px;
+	padding: 15px;
+}
+	
+
+.kepala {
+	margin-bottom: 15px;
+}
+
+.menu a{
+	border: 2px solid #fff;
+	padding: 10px;
+	background-color: #078405;
+	color: #fff;
+	text-decoration: none;
+	text-decoration-color: black;
+}
+
+.menu a:hover {
+	background-color: #056b04;
+}
+
+.isi{
+	padding: 10px;
+}
+
+table{
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+table th{
+	border: 1px solid #ccc;
+	padding: 10px;
+	background-color: #21bf9a;
+	color: #fff;
+
+}
+
+table td{
+	border: 1px solid #ccc;
+	padding: 14px;
+}
+
+a{
+	border: 2px solid #ee4b98;
+	border-radius: 10px;
+	background-color: #c1c1c1;
+	padding: 8px;
+	width: 80px;
+	text-decoration: none;
+
+
+.footer p {
+	position: absolute;
+
+}
+
+.btn-data {
+	border: 2px solid #ee4b98;
+	margin-right: 300px;
+	margin-top: 300px;
+	margin-bottom: 100px;
+	text-decoration: none;
+	padding: 10px 330px;
+	border-radius: 10px;
+	background-color: #c1c1c1;
+	text-decoration: none;
+}
+
+.btn-data:hover {
+	color: white;
+	background: #e9ebee;
+	transition-duration: 0.3s;
+.l{
+
+}
+
+ .footer{
+ 	padding: 40px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+ }
+
+ th{
+
+ }
