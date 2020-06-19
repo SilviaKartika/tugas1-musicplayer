@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 // Mulai sesi
 session_start();
 
-define('URL', 'http://localhost/uts_silviakartika/');
+define('URL', 'http://localhost/htdocs/Uts_silviakartika_SI5/');
 
 define('ASSET', URL . 'layout/assets/');
 

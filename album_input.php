@@ -1,35 +1,30 @@
-<?php
+<?php 
 
-	$sel = new App\Select();
-	$a_rows = $sel->selectar();
- ?>
+$alb = new App\Album();
+$lst = $alb->listArtist();
+?>
 
-<div  class="btn-data" align="center"><a href="index.php?halaman=album_tampil"> Data Album</a></div>
 <h2 align="center">Input Data Album</h2>
+
 <form method="POST" action="album_proses.php">
-	<table align="center"> 
+	<table align="center">
 		<tr>
-			<td>Id Artist</td>
+			<td>NAMA</td>
+			<td><input type="text" name="album_name" required=""></td>
+		</tr>
+		<tr>
+			<td>ARTIS</td>
 			<td>
-				<select name="artist_id">
-					<option disabled selected>--Pilih Id Artist--</option>
-					<?php foreach ($a_rows as $row) { ?>
-					<option value="<?php echo $row['artist_id']; ?>"><?php echo $row['artist_id']; ?></option>
+				<select name="album_id_artist">
+					<?php foreach ($lst as $ls) { ?>
+					<option value="<?php echo $ls['artist_id']; ?>"><?php echo $ls['artist_name']; ?></option>
 					<?php } ?>
 				</select>
 			</td>
 		</tr>
 		<tr>
-			<td>Nama Album</td>
-			<td>
-				<input type="text" name="album_name">
-			</td>
-		</tr>
-		<tr>
 			<td></td>
-			<td>
-				<input type="submit" name="tsimpan" value="Simpan">
-			</td>
+			<td><input type="submit" name="btn-simpan" value="SIMPAN"></td>
 		</tr>
 	</table>
 </form>

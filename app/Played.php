@@ -10,19 +10,17 @@ namespace App;
 
 		public function input(){
 
-			$artist = $_POST['artist_id'];
-			$album = $_POST['album_id'];
-			$track = $_POST['track_id'];
-			$play = $_POST['played'];
+			$play = $_POST['play_id'];
+			$track = $_POST['play_id_track'];
+			$date = $_POST['play_date'];
 
-			$sql = "INSERT INTO tb_played(artist_id, album_id, track_id, played) VALUES (
-										   :artist_id, :album_id, :track_id, :played)";
+			$sql = "INSERT INTO tb_played(play_id, play_id_track, play_date) VALUES (
+										   :play_id, :play_id_track, :play_date)";
 
 			$stmt = $this->db->prepare($sql);
-			$stmt->bindParam(":artist_id", $artist);
-			$stmt->bindParam(":album_id", $album);
-			$stmt->bindParam(":track_id", $track);
-			$stmt->bindParam(":played", $play);
+			$stmt->bindParam(":play_id", $play);
+			$stmt->bindParam(":play_id_track", $track);
+			$stmt->bindParam(":play_date", $date);
 			$stmt->execute();
 
 			return false;
@@ -44,9 +42,9 @@ namespace App;
 
 		public function edit($id)
 		{
-			$sql = "SELECT * FROM tb_played WHERE played=:played";
+			$sql = "SELECT * FROM tb_played WHERE play_id=:play_id";
 			$stmt = $this->db->prepare($sql);
-			$stmt->bindParam(":played", $id);
+			$stmt->bindParam(":play_id", $id);
 			$stmt->execute();
 
 			$row = $stmt->fetch();
@@ -57,19 +55,17 @@ namespace App;
 		public function update()
 		{
 
-			$artist = $_POST['artist_id'];
-			$album = $_POST['album_id'];
-			$track = $_POST['track_id'];
-			$play = $_POST['played'];
-			$id = $_POST['played'];
+			$play = $_POST['play_id'];
+			$track = $_POST['play_id_track'];
+			$date = $_POST['play_date'];
+			$id = $_POST['play_id'];
 
-			$sql = "UPDATE tb_played SET artist_id=:artist_id, album_id=:album_id, track_id=:track_id, played=:played WHERE played=:played";
+			$sql = "UPDATE tb_played SET play_id=:play_id, play_id_track=:play_id_track, play_date=:play_date WHERE play_id=:play_id";
 			$stmt = $this->db->prepare($sql);
-			$stmt->bindParam(":artist_id",$artist);
-			$stmt->bindParam(":album_id",$album);
-			$stmt->bindParam(":track_id",$track);
-			$stmt->bindParam(":played",$play);
-			$stmt->bindParam(":played", $id);
+			$stmt->bindParam(":play_id",$play);
+			$stmt->bindParam(":play_id_track",$track);
+			$stmt->bindParam(":play_date",$date);
+			$stmt->bindParam(":play_id", $id);
 
 			$stmt->execute();
 
@@ -78,9 +74,9 @@ namespace App;
 
 		public function delete($id)
 		{
-			$sql = "DELETE FROM tb_played WHERE played=:played";
+			$sql = "DELETE FROM tb_played WHERE play_id=:play_id";
 			$stmt = $this->db->prepare($sql);
-			$stmt->bindParam(":played",$id);
+			$stmt->bindParam(":play_id",$id);
 			$stmt->execute();
 
 			return false;

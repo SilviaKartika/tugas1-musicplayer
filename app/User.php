@@ -104,5 +104,13 @@ class User extends Controller
 		return false;
 	}
 
+		public function delete($id)
+		{
+			$sql = "DELETE FROM tb_users WHERE user_id=:user_id";
+			$stmt = $this->db->prepare($sql);
+			$stmt->bindParam(":user_id",$id);
+			$stmt->execute();
 
+			return false;
+		}
 }

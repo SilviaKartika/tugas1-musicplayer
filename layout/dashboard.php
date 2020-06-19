@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Informasi Manajemen Music</title>
+	<title>Sistem Informasi Manajemen Music Player</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo ASSET; ?>css/style.css">
 	<link href="<?php echo ASSET; ?>images/header.png" rel="">
 </head>

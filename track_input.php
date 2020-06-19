@@ -1,47 +1,38 @@
-<?php
+<?php 
 
-	$sel = new App\Select();
-	$a_rows = $sel->selectar();
-	$al_rows = $sel->selecta();
+$alb = new App\Track();
+$lst = $alb->listAlbum();
+?>
 
- ?>
-<div  class="btn-data" align="center"><a href="index.php?halaman=track_tampil"> Data Track</a></div>
 <h2 align="center">Input Data Track</h2>
-<form method="POST" action="track_proses.php">
+
+<form method="POST" action="track_proses.php" enctype="multipart/form-data">
 	<table align="center">
 		<tr>
-			<td>Nama Track</td>
-			<td><input type="text" name="track_name"></td>
-		</tr> 
+			<th>JUDUL</th>
+			<td><input type="text" name="track_name" required=""></td>
+		</tr>
 		<tr>
-			<td>Id Artist</td>
+			<th>ALBUM</th>
 			<td>
-				<select name="artist_id">
-					<option disabled selected>--Pilih Id Artist--</option>
-					<?php foreach ($a_rows as $row) { ?>
-					<option value="<?php echo $row['artist_id']; ?>"><?php echo $row['artist_id']; ?></option>
+				<select name="track_id_album">
+					<?php foreach ($lst as $ls) { ?>
+					<option value="<?php echo $ls['album_id']; ?>"><?php echo $ls['album_name']; ?></option>
 					<?php } ?>
 				</select>
 			</td>
 		</tr>
 		<tr>
-			<td>Id Album</td>
-			<td>
-				<select name="album_id">
-					<option disabled selected>--Pilih Id Album--</option>
-					<?php foreach ($al_rows as $row) { ?>
-					<option value="<?php echo $row['album_id']; ?>"><?php echo $row['album_id']; ?></option>
-					<?php } ?>
-				</select>
-			</td>
+			<th>DURASI</th>
+			<td><input type="text" name="track_time" required=""></td>
 		</tr>
 		<tr>
-			<td>Time</td>
-			<td><input type="text" name="waktu"></td>
+			<th>FILE (MP3)</th>
+			<td><input type="file" name="track_file"></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><input type="submit" name="tsimpan" value="Simpan"></td>
+			<td><input type="submit" name="btn-simpan" value="SIMPAN"></td>
 		</tr>
 	</table>
 </form>

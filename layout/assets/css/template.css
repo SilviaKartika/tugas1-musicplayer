@@ -1,11 +1,17 @@
+ .container{
+   margin: auto;
+   width: 1020px;
+}
+
+.header{
+   margin-bottom: 1px;
+
+}
+
  .login-page { 
-
-   width: 360px; 
-
+   width: 500px; 
    padding: 8% 0 0; 
-
    margin: auto; 
-
  } 
 
  .form { 
@@ -14,7 +20,7 @@
    z-index: 1; 
    border-radius: 8px;
    background: #FFFFFF; 
-   max-width: 360px; 
+   max-width: 500px; 
    margin: 0 auto 100px; 
    padding: 45px; 
    text-align: center; 
@@ -22,29 +28,12 @@
 
  } 
 
- .form .error { 
-
-   color: #FFFFFF; 
-   background: #ef3b3a; 
-   border: 0; 
-   margin: 0 0 15px; 
-   padding: 15px; 
-
- } 
-
- .form .success { 
-
-   color: #FFFFFF; 
-
-   background: #30A2A0; 
-
-   border: 0; 
-
-   margin: 0 0 15px; 
-
-   padding: 15px; 
-
- } 
+table th{
+   border: 1px solid #0f0f0f;
+   padding: 10px;
+   background-color: #14b4a1;
+   color: #0f0f0f;
+}
 
  .form input { 
 
@@ -87,23 +76,6 @@
 
  } 
 
- .form .message { 
-
-   margin: 15px 0 0; 
-
-   color: #b3b3b3; 
-
-   font-size: 12px; 
-
- } 
-
- .form .message a { 
-
-   color: #4CAF50; 
-
-   text-decoration: none; 
-
- } 
 
  .container { 
 
@@ -177,13 +149,13 @@
 
    /* fallback for old browsers */ 
 
-   background: -webkit-linear-gradient(right, #c4eede, ##c1c1c1); 
+   background: -webkit-linear-gradient(right, #c4eede, #fea516); 
 
-   background: -moz-linear-gradient(right, #c4eede, #234e79); 
+   background: -moz-linear-gradient(right, #fea516, #5c58aa); 
 
    background: -o-linear-gradient(right, #c4eede, #c1c1c1); 
 
-   background: linear-gradient(to left, #234e79, #13b9a3); 
+   background: linear-gradient(to left, #dbb981, #13b9a3); 
 
    font-family: "Roboto", sans-serif; 
 
@@ -199,7 +171,8 @@ h5 {
 
 .menu a{
    border: 2px solid #fff;
-   padding: 10px;
+   border-radius: 8px;
+   padding: 15px;
    background-color: #078405;
    color: #fff;
    text-decoration: none;
@@ -207,5 +180,52 @@ h5 {
 }
 
 .menu a:hover {
-   background-color: #056b04;
+   background-color: #dbb981;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+table th {
+   background: #F8F9F9; 
+   padding: 4px;
+   text-align: left;
+   text-transform: capitalize;
+   font-weight: bold;
+   border: 1px solid #ccc;
+}
+
+table tr {
+   border: 1px solid #ccc;
+}
+
+table td {
+   padding: 6px;
+   border: 1px solid #ccc;
+}
+
+.btn {
+   border: 1px solid #ccc;
+   font-size: 15px;
+   font-weight: 400;
+   padding: 4px;
+   vertical-align: 3px;
+   text-decoration: none;
+}
+
+.main {
+   min-height: 400px;
+}
+
+.grid-music {
+   display: grid;
+   grid-auto-columns:33,333333%;
+   grid-template-areas: "a";
+   grid-gap: 1px;
+}
+
+.grid-music > div {
+  text-align: center;
 }

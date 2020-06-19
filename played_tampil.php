@@ -8,17 +8,15 @@
 <h2 align="center">Data Played</h2>
  <table border="1" width="800" align="center" cellpadding="5" cellspacing="2">
  	<tr>
- 		<th>Id Artist</th>
- 		<th>Id Album</th>
+ 		<th>Id Play</th>
  		<th>Id Track</th>
- 		<th>Played</th>
+ 		<th>Date</th>
  	</tr>
  	<?php foreach ($rows as $row) { ?>
  		<tr>
- 			<td><?php echo $row['artist_id']; ?></td>
- 			<td><?php echo $row['album_id']; ?></td>
-	 		<td><?php echo $row['track_id']; ?></td>
-	 		<td><?php echo $row['played']; ?></td>
+ 			<td><?php echo $row['play_id']; ?></td>
+ 			<td><?php echo $row['play_id_track']; ?></td>
+	 		<td><?php echo $row['play_date']; ?></td>
  		</tr>
  	<?php } ?> 
 

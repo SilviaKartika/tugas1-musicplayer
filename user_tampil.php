@@ -32,7 +32,7 @@ $rows = $usr->tampil();
 				}
 				?>				
 			</td>
-			<td><a href="dashboard.php?page=user_edit&id=<?php echo $row['user_id']; ?>" class="btn">Edit</a></td>
+			<td><a href="dashboard.php?page=user_edit&id=<?php echo $row['user_id']; ?>" class="btn">Edit</a><a href="user_proses.php?delete-id=<?php echo $row['user_id']; ?>">Delete</a></td>
 		</tr>
 	<?php } ?>
 </table>

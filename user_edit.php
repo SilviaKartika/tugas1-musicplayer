@@ -6,11 +6,11 @@ $user = new App\User();
 $row = $user->edit($id);
 ?>
 
-<h2>EDIT USER</h2>
+<h2 align="center">EDIT USER</h2>
 
 <form method="POST" action="user_proses.php">
 	<input type="hidden" name="user_id" value="<?php echo $id; ?>">
-	<table>
+	<table align="center">
 		<tr>
 			<td>USERNAME</td>
 			<td><input type="text" name="user_name" value="<?php echo $row['user_name']; ?>" required=""></td>

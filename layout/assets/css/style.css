@@ -4,7 +4,7 @@
 }
 
 .header{
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 
 }
 .main{
@@ -120,6 +120,26 @@ a{
     font-weight: bold;
  }
 
- th{
+ .btn {
+   border: 1px solid #ccc;
+   font-size: 15px;
+   font-weight: 400;
+   padding: 4px;
+   vertical-align: 3px;
+   text-decoration: none;
+}
 
- }
+.main {
+   min-height: 400px;
+}
+
+.grid-music {
+   display: grid;
+   grid-auto-columns:33,333333%;
+   grid-template-areas: "a a a";
+   grid-gap: 50px;
+}
+
+.grid-music > div {
+  text-align: center;
+}
